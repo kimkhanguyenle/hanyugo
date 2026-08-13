@@ -1,0 +1,13 @@
+name = "hanyugo-api"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+
+# Once you create a D1 database (wrangler d1 create hanyugo-db), uncomment
+# and fill in the database_id it gives you.
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "hanyugo-db"
+# database_id = "REPLACE_ME"
+
+[vars]
+ENVIRONMENT = "development"
