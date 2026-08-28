@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-silk-paper text-ink-charcoal font-sans selection:bg-cinnabar/20 selection:text-cinnabar min-h-screen;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(199, 44, 65, 0.02) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(13, 115, 119, 0.03) 0%, transparent 40%);
+  }
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-variation-settings:
+    "FILL" var(--icon-fill, 0),
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* Calligraphy Paper Grid (Mi Zi Ge 米字格) */
+.mizige-bg {
+  position: relative;
+  background-color: #FAF7EE;
+  background-image: 
+    linear-gradient(to right, rgba(199, 44, 65, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(199, 44, 65, 0.15) 1px, transparent 1px),
+    linear-gradient(45deg, transparent 49.5%, rgba(199, 44, 65, 0.1) 49.5%, rgba(199, 44, 65, 0.1) 50.5%, transparent 50.5%),
+    linear-gradient(-45deg, transparent 49.5%, rgba(199, 44, 65, 0.1) 49.5%, rgba(199, 44, 65, 0.1) 50.5%, transparent 50.5%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+}
+
+/* Glassmorphism with Chinese Parchment Texture */
+.parchment-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 220, 217, 0.85);
+  box-shadow: 0 10px 30px -5px rgba(28, 28, 31, 0.04), 0 1px 3px rgba(0,0,0,0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.parchment-card:hover {
+  border-color: rgba(199, 44, 65, 0.35);
+  box-shadow: 0 16px 36px -8px rgba(199, 44, 65, 0.09), 0 0 0 1px rgba(199, 44, 65, 0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C72C41;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
