@@ -1,0 +1,96 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        cinnabar: {
+          DEFAULT: "#C72C41",
+          hover: "#B02336",
+          dark: "#8E1616",
+          light: "#FFF1F2",
+          border: "#FCA5A5",
+        },
+        jade: {
+          DEFAULT: "#0D7377",
+          hover: "#095B5E",
+          dark: "#063A3C",
+          light: "#E6FFFA",
+          border: "#99F6E4",
+        },
+        amber: {
+          gold: "#D4AF37",
+          warm: "#F59E0B",
+          light: "#FEF9E7",
+          border: "#FDE68A",
+        },
+        silk: {
+          paper: "#FAF7EE",
+          parchment: "#F4EFE0",
+          pure: "#FFFFFF",
+          dim: "#EBE5D3",
+        },
+        ink: {
+          charcoal: "#1C1C1F",
+          gray: "#4A4A52",
+          light: "#71717A",
+          mist: "#E4E4E7",
+        },
+        surface: "#FAF7EE",
+        "surface-dim": "#EBE5D3",
+        "surface-bright": "#FFFFFF",
+        "surface-container-lowest": "#FFFFFF",
+        "surface-container-low": "#FAF7EE",
+        "surface-container": "#F4EFE0",
+        "surface-container-high": "#ECE6D4",
+        "surface-container-highest": "#E2DAC8",
+        "on-surface": "#1C1C1F",
+        "on-surface-variant": "#5B4A48",
+        outline: "#A8948F",
+        "outline-variant": "#E8DCD9",
+        primary: "#C72C41",
+        "on-primary": "#FFFFFF",
+        "primary-container": "#FFE4E6",
+        "on-primary-container": "#8E1616",
+        secondary: "#0D7377",
+        "on-secondary": "#FFFFFF",
+        "secondary-container": "#CCFBF1",
+        "on-secondary-container": "#063A3C",
+        error: "#DC2626",
+        "on-error": "#FFFFFF",
+      },
+      fontFamily: {
+        display: ["Playfair Display", "serif"],
+        sans: ["Hanken Grotesk", "sans-serif"],
+        hanzi: ["Noto Serif SC", "serif"],
+      },
+      boxShadow: {
+        'seal': '0 2px 8px rgba(199, 44, 65, 0.25)',
+        'parchment': '0 10px 30px -5px rgba(28, 28, 31, 0.05), 0 0 0 1px rgba(168, 148, 143, 0.15)',
+        'card-hover': '0 20px 35px -10px rgba(199, 44, 65, 0.12), 0 0 0 1px rgba(199, 44, 65, 0.2)',
+      },
+      animation: {
+        'spin-slow': 'spin 65s linear infinite',
+        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+        'stamp-in': 'stampIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+        'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+      },
+      keyframes: {
+        pulseGlow: {
+          '0%, 100%': { opacity: '0.9', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.03)' },
+        },
+        stampIn: {
+          '0%': { opacity: '0', transform: 'scale(2.2) rotate(-15deg)' },
+          '70%': { opacity: '1', transform: 'scale(0.92) rotate(2deg)' },
+          '100%': { opacity: '1', transform: 'scale(1) rotate(0deg)' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
